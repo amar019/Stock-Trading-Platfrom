@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import API_BASE from "../../config";
 
 const tickers = [
   { symbol: "RELIANCE", price: "2,847.30", change: "+1.24%" },
@@ -106,7 +107,7 @@ export default function Signup() {
     e.preventDefault();
     setError("");
     try {
-      const res = await fetch("https://stock-trading-platfrom.vercel.app/register", {
+      const res = await fetch(`${API_BASE}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, phone, email, password }),
