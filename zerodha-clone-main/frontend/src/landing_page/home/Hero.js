@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// eslint-disable-next-line no-unused-vars
 const tickers = [
   { symbol: "RELIANCE", price: "2,847.30", change: "+1.24%", up: true },
   { symbol: "TCS", price: "3,912.75", change: "+0.87%", up: true },
@@ -28,7 +29,7 @@ const stats = [
   { value: "15+", label: "Asset Classes" },
 ];
 
-function SparkLine({ up }) {
+function SparkLine({ up }) { // eslint-disable-line no-unused-vars
   const points = up
     ? "0,40 15,35 30,38 45,25 60,20 75,15 90,10 105,5"
     : "0,10 15,15 30,12 45,22 60,28 75,32 90,38 105,42";

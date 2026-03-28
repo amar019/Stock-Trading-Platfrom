@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const notes = [
   "Call & Trade and RMS auto-squareoff: Additional charges of ₹50 + GST per order.",
@@ -17,7 +17,6 @@ const quickLinks = [
 ];
 
 function Brokerage() {
-  const [hovered, setHovered] = useState(null);
 
   return (
     <>
@@ -168,8 +167,8 @@ function Brokerage() {
                   key={i}
                   href={link.href}
                   className="brok-link"
-                  onMouseEnter={() => setHovered(i)}
-                  onMouseLeave={() => setHovered(null)}
+                  onMouseEnter={() => {}}
+                  onMouseLeave={() => {}}
                 >
                   <span className="brok-link-icon">{link.icon}</span>
                   {link.label}

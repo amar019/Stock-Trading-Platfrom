@@ -27,7 +27,6 @@ const pillars = [
 function Stats() {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
-  const [hovered, setHovered] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -248,8 +247,8 @@ function Stats() {
                     transform: visible ? "translateY(0)" : "translateY(16px)",
                     transition: `opacity 0.5s ease ${0.2 + i * 0.1}s, transform 0.5s ease ${0.2 + i * 0.1}s, border-color 0.2s, box-shadow 0.2s, background 0.2s, translateX 0.2s`,
                   }}
-                  onMouseEnter={() => setHovered(i)}
-                  onMouseLeave={() => setHovered(null)}
+                  onMouseEnter={() => {}}
+                  onMouseLeave={() => {}}
                 >
                   <div className="stats-pillar-icon">{p.icon}</div>
                   <div>

@@ -82,7 +82,7 @@ export default function Signup() {
   const [tickerOffset, setTickerOffset] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
-  const tickerRef = useRef(null);
+  const tickerRef = useRef(null); // eslint-disable-line no-unused-vars
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 100);
@@ -373,10 +373,6 @@ export default function Signup() {
       borderRadius: "12px",
       cursor: "pointer",
       letterSpacing: "0.02em",
-      transition: "all 0.25s ease",
-      boxShadow: "0 4px 20px rgba(16,185,129,0.35)",
-      opacity: loaded ? 1 : 0,
-      transform: loaded ? "translateY(0)" : "translateY(20px)",
       transition: `opacity 0.6s ease 0.7s, transform 0.6s ease 0.7s, box-shadow 0.25s ease, background 0.25s ease`,
     },
     trustRow: {

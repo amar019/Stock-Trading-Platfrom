@@ -51,7 +51,6 @@ const floatingAssets = [
 ];
 
 export default function OpenAccount() {
-  const [hovered, setHovered] = useState(false);
   const [visible, setVisible] = useState(false);
   const [counters, setCounters] = useState([0, 0, 0, 0]);
   const sectionRef = useRef(null);
@@ -543,8 +542,8 @@ export default function OpenAccount() {
             <button
               className="oa-cta-btn"
               onClick={() => navigate("/signup")}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
+              onMouseEnter={() => {}}
+              onMouseLeave={() => {}}
             >
               Sign Up Now — It's Free
               <span className="arrow">→</span>

@@ -212,10 +212,10 @@ const Hero = () => {
         </p>
 
         <div className="hero-actions">
-          <a href="#" className="btn-primary">
+          <a href="/products" className="btn-primary">
             View offerings <ArrowRight />
           </a>
-          <a href="#" className="btn-ghost">
+          <a href="/support" className="btn-ghost">
             See documentation <span className="btn-arrow">→</span>
           </a>
         </div>
