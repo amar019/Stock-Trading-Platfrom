@@ -8,6 +8,7 @@ import {
   CategoryScale, LinearScale, BarElement
 } from "chart.js";
 import "./Summary.css";
+import API_BASE from "../config";
 
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
 
@@ -57,9 +58,9 @@ export default function Summary() {
 
   useEffect(() => {
     Promise.all([
-      axios.get("http://localhost:3002/allHoldings"),
-      axios.get("http://localhost:3002/allPositions"),
-      axios.get("http://localhost:3002/allOrders"),
+      axios.get(`${API_BASE}/allHoldings`),
+      axios.get(`${API_BASE}/allPositions`),
+      axios.get(`${API_BASE}/allOrders`),
     ]).then(([h, p, o]) => {
       setHoldings(h.data || []);
       setPositions(p.data || []);
