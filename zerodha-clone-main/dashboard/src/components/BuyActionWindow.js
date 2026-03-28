@@ -24,7 +24,7 @@ const BuyActionWindow = ({ uid, initialMode = "BUY" }) => {
   useEffect(() => {
     if (orderType === "MARKET") setPrice(ltp);
     else setPrice(ltp);
-  }, [orderType, uid]);
+  }, [orderType, uid, ltp]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const isMarket = orderType === "MARKET";
   const isSL = orderType === "SL" || orderType === "SL-M";
